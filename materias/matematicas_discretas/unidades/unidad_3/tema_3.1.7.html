@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/poke_logo.png">
+    <link rel="stylesheet" href="/styles/uni_3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Hiatus</title>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <a href="/home.html">Hiatus</a>
+        </div>
+    </header>
+
+    <div class="todo">
+        <div class="temario">
+            <h2 class="titulo">
+                Unidad 3: Lógica Matemática
+            </h2>
+            <div class="temas">
+                <a href="./tema_3.1.html">3.1 Lógica Proposicional</a>
+                <a href="./tema_3.1.1.html">3.1.1 Proposiciones simples y compuestas</a>
+                <a href="./tema_3.1.2.html">3.1.2 Tablas de verdad</a>
+                <a href="./tema_3.1.3.html">3.1.3 Tautologías, contradicción y contingencia</a>
+                <a href="./tema_3.1.4.html">3.1.4 Equivalencias lógicas</a>
+                <a href="./tema_3.1.5.html">3.1.5 Reglas de inferencia</a>
+                <a href="./tema_3.1.6.html">3.1.6 Argumentos válidos y no validos</a>
+                <a href="./tema_3.1.7.html" class="seleccionado">3.1.7 Demostración formal</a>
+                <a href="./tema_3.2.html">3.2 Lógica de predicados</a>
+                <a href="./tema_3.2.1.html">3.2.1 Cuantificadores</a>
+                <a href="./tema_3.2.2.html">3.2.2 Representación y evaluación de predicados</a>
+                <a href="./tema_3.3.html">3.3 Algebra declarativa</a>
+                <a href="./tema_3.4.html">3.4 Inducción matemática</a>
+                <a href="./tema_3.5.html">3.5 Aplicaciones de la lógica matemática en la computación</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <h2 class="titulo_cont">3.1.7 Demostración formal</h2>
+            <div class="info_cont">
+                <p>Un sistema matemático consta de axiomas, definiciones y términos no definidos. Se suponen verdaderos los axiomas. Las definiciones se utilizan para crear conceptos nuevos en términos de los existentes. Algunos términos no se definen en forma explicita, sino que se definen en forma implícita mediante los axiomas. Dentro de un sistema matemático es posible deducir teoremas. Un Teorema es una proposición cuya verdad se ha demostrado.<br><br>
+                Un argumento que establece la verdad de un teorema es una demostración. La lógica es una herramienta para el análisis de las demostraciones. En esta sección describiremos dos métodos generales de demostración: Directa y por contradicción.<br><br>
+                Si una fórmula tiene la forma A → B y es una tautología, en donde A y B pueden ser proposiciones compuestas, entonces decimos que B se desprende lógicamente de A y se representa por A |= B.<br><br>
+                También podemos considerar tautologías de la forma (p1 p2 ^ … ^ pn)→ q</p>
+            </div>
+            <div class="info_cont">
+                <p>Entonces está implicación es verdadera sin importar los valores de verdad de cualquiera de sus componentes. En este caso, se dice que q se desprende lógicamente de p1,p2,…,pn. Se escribe.<br><br>
+                p1 , p2 , … , pn |= q<br>
+                o también<br>
+                p1<br>
+                p2<br>
+                .<br>
+                .<br>
+                .<br>
+                pn<br>
+                ____<br>
+                q<br><br>
+                Significa que si se sabe que p1 es verdadera, p2 es verdadera ,…, y pn también es verdadera, entonces estamos seguros que q es verdadera.<br><br>
+                Prácticamente todos los teoremas matemáticos están compuestos por implicaciones de este tipo. Donde p1, p2, … son llamadas hipótesis o premisas, y q es llamada conclusión. Demostrar el teorema, es demostrar que la implicación es una tautología. Note que no estamos tratando de demostrar que q (la conclusión) es verdadera, sino solamente que q es verdadera si todas las p1, p2, … son verdaderas.<br><br>
+                Una demostración directa comienza con las hipótesis, seguidas de las tautologías y reglas de inferencia necesarias, hasta llegar a la conclusión.</p>
+            </div>
+            <div class="info_cont">
+                <p>A continuación veremos lo que es una prueba condicional. En este caso la conclusión es un enunciado de la forma A → B ; en este caso demostrar que la condicional sedesprende de un conjunto de premisas P1, P2, … Pn es equivalente a probar que B de desprende de las premisas junto con A, la cual se llama premisa adicional.<br><br>
+                Esto lo podemos expresar en el siguiente teorema.<br><br>
+                P1, P2, … , Pn |= (A → B) es equivalente a<br>
+                P1, P2, … , Pn, A |= B.<br><br>
+                Ejemplo 1. Demustre el argumento <br><br>
+                p → ¬q, q ∨ ¬r, s → r |= p → ¬s<br><br>
+                Demostración:<br><br>
+                1. p → ¬q__________Premisa<br>
+                2. q ∨ ¬r____________Premisa<br>
+                3. s → r____________Premisa<br>
+                4. p________________Premisa Adicional<br>
+                5. ¬q_______________MPP(1,4)<br>
+                6. ¬r_______________SD(2,5)<br>
+                7. ¬s_______________MTT(3,6)</p>
+            </div>
+            <div class="info_cont">
+                <p>Demostración por contradicción.<br><br>
+                El procedimiento de la demostración por contradicción es semejante a la que se realizó por el método directo con la diferencia de que las líneas iniciales de dicha demostración no son únicamente las hipótesis, sino además se incluye en la demostración una línea con la negación de la conclusión. Por otro lado el objetivo de la demostración es llegar a una contradicción.<br><br>
+                La demostración del siguiente teorema por el método de contradicción es como se indica<br><br>
+                p → (q ^ r), (q ∨ s) → t, (p ∨ s) |= t<br><br>
+                    
+                Demostración:<br><br>
+                1. p → (q ^ r)____________Premisa<br>
+                2. (q ∨ s) → t____________Premisa<br>
+                3. p ∨ s__________________Premisa<br>
+                4. ¬t_____________________Premisa Adicional<br>
+                5. ¬(q ∨ s)_______________MPP(2,4)<br>
+                6. ¬q ^ ¬s________________Ley de Morgan(5)<br>
+                7. ¬q_____________________LS(6)<br>
+                8. ¬s_____________________LS(6)<br>
+                9. p______________________SD(3,8)<br>
+                10. q ^ r_________________MPP(1,9)<br>
+                11. q_____________________LS(10)<br>
+                12. q ^ ¬q________________Conjunción(7,11)<br><br>
+                Pero esto último es una comtradicción, por lo que queda demostrado el argumento.</p>
+            </div>
+            <div class="info_cont">
+                <p>Note que juntamente con las premisas se debe incluir la negación de la conclusión como premisa adicional, paso 4. En este momento el alumno ya tiene los elementos para llevar a cabo demostraciones con el apoyo del maestro. Es conveniente plantear varios enunciados, para que el alumno los represente con simbología lógica en forma de teorema. Que ese mismo teorema lo represente con su tabla de verdad y haga la correspondiente demostración por los dos métodos antes mencionados.<br><br>
+                La forma en que el aprende a aplicar reglas de inferencia es semejante a la manera en que deberá realizar una factorización o una aplicación de una fórmula en cálculo diferencial o integral o la formula que debe aplicar para resolver un problema en física. Lo que debe aprender es a relacionar los distintos conocimientos para poder llegar a la solución. Es importante mencionar que el camino que debe seguir el alumno no es el mismo que el maestro siguió sino uno distinto pero que ambos llegan al resultado.</p>
+            </div>
+            <div class="img_cont">
+                <iframe src="https://www.youtube.com/embed/JQzQii3785A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <footer>
+        <p class="text_footer">
+            Pagina creada por el equipo Pokémon 2020 &copy;
+        </p>
+    </footer>
+    
+</body>
+</html>

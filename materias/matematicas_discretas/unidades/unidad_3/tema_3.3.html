@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/poke_logo.png">
+    <link rel="stylesheet" href="/styles/uni_3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Hiatus</title>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <a href="/home.html">Hiatus</a>
+        </div>
+    </header>
+
+    <div class="todo">
+        <div class="temario">
+            <h2 class="titulo">
+                Unidad 3: Lógica Matemática
+            </h2>
+            <div class="temas">
+                <a href="./tema_3.1.html">3.1 Lógica Proposicional</a>
+                <a href="./tema_3.1.1.html">3.1.1 Proposiciones simples y compuestas</a>
+                <a href="./tema_3.1.2.html">3.1.2 Tablas de verdad</a>
+                <a href="./tema_3.1.3.html">3.1.3 Tautologías, contradicción y contingencia</a>
+                <a href="./tema_3.1.4.html">3.1.4 Equivalencias lógicas</a>
+                <a href="./tema_3.1.5.html">3.1.5 Reglas de inferencia</a>
+                <a href="./tema_3.1.6.html">3.1.6 Argumentos válidos y no validos</a>
+                <a href="./tema_3.1.7.html">3.1.7 Demostración formal</a>
+                <a href="./tema_3.2.html">3.2 Lógica de predicados</a>
+                <a href="./tema_3.2.1.html">3.2.1 Cuantificadores</a>
+                <a href="./tema_3.2.2.html">3.2.2 Representación y evaluación de predicados</a>
+                <a href="./tema_3.3.html" class="seleccionado">3.3 Algebra declarativa</a>
+                <a href="./tema_3.4.html">3.4 Inducción matemática</a>
+                <a href="./tema_3.5.html">3.5 Aplicaciones de la lógica matemática en la computación</a>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <h2 class="titulo_cont">3.3 Algebra declarativa</h2>
+            <div class="info_cont">
+                <p>Lo que algunos llaman álgebra declarativa no es otra cosa que el álgebra proposicional, o sea, la estructura algebraica que se forma con expresiones utilizando los conectivos lógicos.<br><br>
+                Empezaremos por definir formalmente cómo se construye una fórmula en lógica. Una expresión sintácticamente correcta se le llama fórmula bien formada (fbf) o simplemente fórmula y su definición es:<br><br>
+                Una fórmula en lógica de proposiciones se obtiene al aplicar una ó más veces las siguientes reglas:<br><br>
+                (B) si p es una proposición lógica, es una fbf.<br>
+                (R) si F es una fórmula bien formada (fbf) también lo es (¬F).<br>
+                (R) si p,q son fbf entonces también lo es (p*q) donde * es uno de los operadores binarios, ^ v → ↔.</p>
+            </div>
+            <div class="info_cont">
+                <p>En el cálculo proposicional existen algunas tautologías especialmente útiles cuya demostración se reduce a la confección de su correspondiente tabla de verdad, a saber:<br><br>
+                <b>Involución:</b><br>
+                ¬ (¬ p) ↔ p (se lee “no, no p, equivale a p”)<br><br>
+                <b>Idempotencia:</b><br>
+                (p ^ ¬ p) ↔ p<br>
+                (p v ¬ p) ↔ p<br><br>
+                <b>Conmutatividad:</b><br>
+                a) de la disyunción: p v q ↔ q v p<br>
+                b) de la conjunción: p ^ q ↔ q ^ p<br><br>
+                <b>Asociatividad:</b><br>
+                a) de la disyunción: (p v q) v r ↔ p v (q v r)<br>
+                b) de la conjunción: (p ^ q) ^ r ↔ p ^ (q ^ r)<br><br>
+                <b>Distributividad:</b><br>
+                De la conjunción respecto de la disyunción: (p Ú q) Ù r ↔ (p Ù r) Ú (q Ù r)<br>
+                De la disyunción respecto de la conjunción: (p Ù q) Ú r ↔ (p Ú r) Ú (q Ú r)<br><br>
+                <b>Leyes de De Morgan:</b><br>
+                ~ ( p Ú q ) ↔ ~ p Ù ~ q<br>
+                “La negación de una disyunción equivale a la conjunción de las negaciones”<br>
+                ~ ( p Ù q ) ↔ ~ p Ú ~ q<br>
+                “La negación de una conjunción equivale a la disyunción de las negaciones”<br><br>
+                <b>Negación de una Implicación:</b><br>
+                Las proposiciones p Þ q y ~ (p Ù ~ q) son equivalentes, como vemos realizando la tabla de valores correspondientes:</p>
+            </div>
+            <div class="especial">
+                <img src="/img/materias/unidades_mate/uni_3/algebra-declarativa.jpg" alt="">
+            </div>
+            <div class="info_cont">
+                <p>Con esto, comprobamos que la negación de la primera equivale a la negación de la segunda, es decir:<br><br>
+                    ~ (p Þ q) Û ~{ ~(p Ù ~ q)}, y podemos concluir entonces que:<br>
+                    ~( p Þ q ) Û ( p Ù ~ q)<br><br>
+                    Es decir, la negación de una implicación no es una implicación sino la conjunción del antecedente con la negación del consecuente.<br><br>
+                    <b>Ejemplo:</b><br>
+                    Sea la implicación p: hoy es viernes entonces mañana es domingo.<br>
+                    Su negación es ~ p: hoy es viernes y mañana no es domingo.</p>
+            </div>
+            <div class="img_cont">
+                <iframe src="https://www.youtube.com/embed/Og9VAYbnR7E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    
+    </div>
+
+    <footer>
+        <p class="text_footer">
+            Pagina creada por el equipo Pokémon 2020 &copy;
+        </p>
+    </footer>
+    
+</body>
+</html>
